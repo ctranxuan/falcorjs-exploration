@@ -1,0 +1,40 @@
+.demo-card-square.mdl-card {
+  width: 320px;
+  height: 320px;
+}
+.demo-card-square > .mdl-card__title-odd {
+  color: #fff;
+  background:
+    bottom right 15% no-repeat #0288D1;
+}
+
+.demo-card-square > .mdl-card__title-even {
+  color: #fff;
+  background:
+    bottom right 15% no-repeat #FF4081;
+}
+
+.runner-card-title {
+  color: #fff;
+  font-size: large;
+  font-weight: bold;
+}
+
+.runner-health {
+  color: #fff;
+  background:
+    bottom right 15% no-repeat #FF4081;
+}
+
+.runner-geolocation {
+  color: #fff;
+  background:
+    bottom right 15% no-repeat #37911C;
+}
+
+
+.runner-number {
+  text-align: right;
+  font-weight: bold;
+  font-size: larger;
+}

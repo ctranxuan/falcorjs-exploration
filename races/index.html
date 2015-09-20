@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Race</title>
+  <link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.4/material.red-orange.min.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" type="text/css" href="app/css/main.css" />
+  <link rel="stylesheet" type="text/css" href="app/css/runner.css" />
+</head>
+
+<body>
+  <div class="demo-layout-transparent mdl-layout mdl-js-layout">
+    <header class="mdl-layout__header">
+      <div class="mdl-layout__header-row">
+        <span class="mdl-layout-title">Race</span>
+      </div>
+    </header>
+    <main class="mdl-layout__content">
+      <!-- mount point -->
+      <div id="content"></div>
+    </main>
+  </div>
+
+  <script src="node_modules/falcor/dist/falcor.browser.js"></script>
+  <script src="./node_modules/material-design-lite/material.min.js"></script>
+  <script src="./node_modules/riot/riot.min.js"></script>
+  <script>
+    var model = new falcor.Model({source: new falcor.HttpDataSource('/model.json') });
+  </script>
+  <script src="./dist/js/routes.js"></script>
+  <script src="./dist/js/runners/runner-service.js"></script>
+  <script src="./dist/js/runners/runners.js"></script>
+  <script src="./dist/js/runners/runners-page.js"></script>
+  <script src="./dist/js/runners/runner-card.js"></script>
+  <script src="./dist/js/runners/runner-stats.js"></script>
+  <script src="./dist/js/runners/runner-health.js"></script>
+  <script src="./dist/js/runners/runner-geolocation.js"></script>
+
+  <script>
+    // var model = new falcor.Model({source: new falcor.HttpDataSource('/model.json') });
+
+        // retrieve the "greeting" key from the root of the Virtual JSON resource
+    // model.
+    //   get("greeting").
+    //   then(function(response) {
+    //     // document.write(response.json.greeting);
+    //     console.log(response);
+    //   });
+    //
+    // model
+    //   .get(["runnersById", {from: 1, to: 3}, ["firstName", "lastName"]])
+    //   .then(function(response) {
+    //     console.log(response);
+    //   });
+    //
+    // model
+    //   .get(["health", {from: 1, to: 3}, ["heartBeat", "bloodPressure", "runner"], ["firstName", "lastName", "age"]])
+    //   .then(function(response) {
+    //     console.log(response);
+    //   });
+    //
+    // model
+    //   .get(["geoLocation", {from: 1, to: 3}, ["latitude", "longitude", "runner"], ["firstName", "lastName", "age"]])
+    //   .then(function(response) {
+    //     console.log(JSON.stringify(response, null, 3));
+    // });
+  </script>
+  <script>
+    riot.mount('*');
+    riot.route.exec(handler);
+   </script>
+</body>
+</html>

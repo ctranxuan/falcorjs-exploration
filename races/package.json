@@ -1,0 +1,44 @@
+{
+  "name": "races",
+  "version": "1.0.0",
+  "description": "UI sample for an app using falcor.js",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist/",
+    "babel:watch": "babel app --watch --out-dir dist --source-maps",
+    "babel:compile": "babel app --out-dir dist --source-maps",
+    "riot:watch": "riot --type es6 -w app dist",
+    "riot:compile": "riot --type es6 app dist",
+    "serve": "parallelshell 'npm run babel:watch' 'npm run riot:watch'",
+    "start": "npm run clean && npm run serve & nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ctranxuan/falcorjs-exploration"
+  },
+  "keywords": [
+    "falcor.js",
+    "riot.js"
+  ],
+  "author": "ctranxuan (streamdata.io)",
+  "license": "Apache License, Version 2.0",
+  "bugs": {
+    "url": "https://github.com/ctranxuan/falcorjs-exploration/issues"
+  },
+  "homepage": "https://github.com/ctranxuan/falcorjs-exploration",
+  "dependencies": {
+    "express": "^4.13.3",
+    "falcor": "^0.1.12",
+    "falcor-express": "^0.1.2",
+    "falcor-router": "^0.2.9",
+    "material-design-lite": "^1.0.4-2",
+    "riot": "^2.2.4"
+  },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "nodemon": "^1.5.0",
+    "parallelshell": "^2.0.0",
+    "rimraf": "^2.4.3"
+  }
+}
