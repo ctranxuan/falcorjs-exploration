@@ -1,1 +1,2 @@
-This project aims to explore [Falcor.js](http://netflix.github.io/falcor/)...
+This project aims to explore [Falcor.js](http://netflix.github.io/falcor/).
+
